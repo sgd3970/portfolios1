@@ -11,6 +11,7 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://portfolios1-one.vercel.app'),
   title: "TechFlow Solutions - 혁신적인 IT 솔루션",
   description: "최첨단 기술과 창의적 아이디어로 비즈니스의 새로운 가능성을 열어가는 혁신적인 IT 솔루션 파트너, TechFlow Solutions",
   keywords: ["IT 솔루션", "웹 개발", "모바일 앱", "클라우드 인프라", "AI/ML", "TechFlow Solutions"],
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TechFlow Solutions - 혁신적인 IT 솔루션",
     description: "최첨단 기술과 창의적 아이디어로 비즈니스의 새로운 가능성을 열어가는 혁신적인 IT 솔루션 파트너",
-    url: "https://techflow.solutions",
+    url: "https://portfolios1-one.vercel.app",
     siteName: "TechFlow Solutions",
     images: [
       {
@@ -63,9 +64,9 @@ export default function RootLayout({
         className={`${notoSans.variable} font-sans antialiased`}
       >
         <Header />
-        <main className="pt-16">
+        <div className="pt-16">
           {children}
-        </main>
+        </div>
         <Footer />
       </body>
     </html>
