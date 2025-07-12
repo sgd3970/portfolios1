@@ -17,13 +17,14 @@ const AboutVisionSection: React.FC = () => {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentElement = sectionRef.current;
+    if (currentElement) {
+      observer.observe(currentElement);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
   }, []);
@@ -121,7 +122,7 @@ const AboutVisionSection: React.FC = () => {
             {/* Floating quote */}
             <div className="absolute -bottom-4 -left-4 bg-white p-6 rounded-xl shadow-lg max-w-xs">
               <div className="text-sm text-gray-700 italic">
-                "혁신적인 기술로 더 나은 미래를 만들어갑니다"
+                &ldquo;혁신적인 기술로 더 나은 미래를 만들어갑니다&rdquo;
               </div>
               <div className="text-xs text-gray-500 mt-2">- CEO, TechFlow Solutions</div>
             </div>
